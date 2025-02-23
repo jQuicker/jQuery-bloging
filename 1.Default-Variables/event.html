@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>click event</title>
+    <script src="../version/jquery-3.7.1.min.js"></script>
+  </head>
+  <script>
+    $(document).ready(function () {
+      $("#alertButton").click(function () {
+        alert("버튼이 클릭됨!");
+      });
+    });
+  </script>
+  <body>
+    <button id="alertButton">클릭해보세요</button>
+  </body>
+</html>

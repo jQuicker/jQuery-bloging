@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>click event</title>
+    <script src="../version/jquery-3.7.1.min.js"></script>
+  </head>
+  <script>
+    $(document).ready(function () {
+      $("#myButton").click(function () {
+        $("#myText").text("버튼이 클릭되었습니다!");
+        $("#myText").css("color", "blue"); // 텍스트 색상 변경
+
+        // Ajax 예제
+      });
+      $("#loadData").click(function () {
+        $.get("./data.json", function (data) {
+          $("#myText").text(data.message);
+        }).fail(function () {
+          $("#myText").text("데이터를 불러오지 못했습니다");
+        });
+      });
+    });
+  </script>
+  <body>
+    <p id="myText">여기에 데이터가 표시</p>
+    <button id="myButton">클릭</button>
+    <button id="loadData">데이터 불러오기</button>
+  </body>
+</html>
