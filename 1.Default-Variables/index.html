@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery</title>
+    <script src="../version/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Jquery 코드 작성
+        $("#handleClick").click(function () {
+          $("#ThisText").text("버튼이 클릭되었습니다");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>JQuery 버튼 클릭시 텍스트 표시</h1>
+    <p id="ThisText">여기에 텍스트가 표시됩니다</p>
+    <button id="handleClick">클릭</button>
+  </body>
+</html>
