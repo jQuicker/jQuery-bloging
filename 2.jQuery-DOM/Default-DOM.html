@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Default-DOM</title>
+    <script src="../version/jquery-3.7.1.min.js"></script>
+  </head>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+  <body>
+    <h1 id="title">Hello, World</h1>
+    <button id="changeTitle">제목 변경</button>
+    <button id="addItem">아이템 추가</button>
+    <ul id="itemList"></ul>
+    <p id="subscription">hello</p>
+
+    <script>
+      $(document).ready(function () {
+        // 제목 변경
+        $("#changeTitle").click(function () {
+          $("#title").text("제목이 변경되었습니다");
+        });
+        // 아이템 추가 기능
+        $("#addItem").click(function () {
+          // ID 수정
+          $("#itemList").append("<li>새로운 아이템</li>");
+        });
+
+        // 스타일 변경
+        $(document).ready(function () {
+          $("#changeTitle").click(function () {
+            $("#title").css({
+              color: "blue",
+              "font-size": "30px",
+            });
+          });
+        });
+      });
+
+      // css 클래스 추가
+      $(document).ready(function () {
+        $("#changeTitle").click(function () {
+          $("#subscription").toggleClass("highlight");
+        });
+      });
+    </script>
+  </body>
+</html>
