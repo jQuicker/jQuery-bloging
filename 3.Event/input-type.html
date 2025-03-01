@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text-input-event</title>
+    <script src="../version/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <input type="text" id="myInput" placeholder="텍스트 입력" />
+    <p id="myParagraph">이곳에 텍스트가 표시됨</p>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("#myInput").on("input", function () {
+        $("#myParagraph").text("입력한 텍스트: " + $(this).val());
+      });
+    });
+  </script>
+</html>

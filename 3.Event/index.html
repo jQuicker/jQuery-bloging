@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JQuery Event Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../version/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <button id="myButton">클릭하세요</button>
+    <p id="myParagraph">이곳에 텍스트가 표시됨</p>
+
+    <script>
+      // JQuery 코드가 여기에 들어감
+      $(document).ready(function () {
+        $("#myButton").click(function () {
+          $("#myParagraph").text("버튼이 클릭되었음");
+        });
+      });
+
+      // 마우스 오버 이벤트
+      $(document).ready(function () {
+        $("#myButton")
+          .mouseover(function () {
+            $(this).css("background-color", "yellow");
+          })
+          .mouseout(function () {
+            $(this).css("background-color", "");
+          });
+      });
+    </script>
+  </body>
+</html>

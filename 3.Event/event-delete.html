@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event-delete</title>
+    <script src="../version/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <button id="myButton">클릭하세요</button>
+    <p id="myParagraph">이곳에 텍스트가 표시됨</p>
+  </body>
+  <script>
+    $(document).ready(function () {
+      const myFunction = function () {
+        $("#myParagraph").text("Event가 발생했습니다");
+      };
+
+      $("#myButton").click(myFunction);
+
+      // 이벤트 제거
+      $("#myButton").off("click", myFunction);
+    });
+  </script>
+</html>
