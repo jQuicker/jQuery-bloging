@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery Animation</title>
+    <script src="../version/jquery-3.7.1.min.js"></script>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: hsl(0, 0%, 20%);
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="fadeButton">Fade In/Out</button>
+    <button id="slideButton">Slide Up/Down</button>
+    <button id="animateButton">Animation</button>
+
+    <div id="box"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#fadeButton").click(function () {
+          $("#box").fadeToggle(1000); // 1 sec fade in/out
+        });
+
+        // slide up/down
+        $("#slideButton").click(function () {
+          $("#box").slideToggle(1000); // 1sec slide up/down
+        });
+
+        // Custom Animation
+        $("#animateButton").click(function () {
+          $("#box").css("display", "block"); // box show
+          $("#box").animate(
+            {
+              width: "200px",
+              height: "200px",
+              opacity: 0.5,
+            },
+            1000
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
